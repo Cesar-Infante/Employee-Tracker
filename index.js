@@ -26,3 +26,10 @@ const initApp = [
         ],
     },
 ];
+
+
+async function init() {
+    let responses = await inquirer.prompt(initApp)  
+}
+
+init()
