@@ -8,6 +8,8 @@ const inquirer = require("inquirer")
 /* Creating a connection to the database. */
 const mysql = require("mysql2")
 
+const db = require("./server")
+
 
 /* This will initialize the prompts to the user */
 const initApp = [
@@ -82,13 +84,13 @@ async function init() {
         } else if (data.initApp === "View All Employees") {
             getEmployees()
         } else if (data.initApp === "Add A Department") {
-            // addDept()
+            addDept()
         } else if (data.initapp === "Add A Role") {
-            // addRole()
+            addRole()
         } else if (data.initApp === "Add A Employee") {
-            // addEmployee()
+            addEmployee()
         } else if (data.initApp === "Update A Employee Role") {
-            // updateRole
+            updateRole()
         } else {
             console.log(err);
         }
@@ -96,4 +98,15 @@ async function init() {
 }
 
 init()
+
+function getDept() {
+    console.log("Get Department Succesful");
+    db.query('SELECT * FROM department', function (err, results) {
+        if (err) {
+            console.log(err)
+        } else {
+            console.table(results)
+        }
+    })
+}
 
