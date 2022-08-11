@@ -8,8 +8,11 @@ const inquirer = require("inquirer")
 /* Creating a connection to the database. */
 const mysql = require("mysql2")
 
+/* This is a connection to the database. */
 const db = require("./server")
 
+/* Importing the figlet module. */
+const figlet = require('figlet')
 
 /* This will initialize the prompts to the user */
 const initApp = [
@@ -101,7 +104,30 @@ init()
 
 function getDept() {
     console.log("Get Department Succesful");
-    db.query('SELECT * FROM department', function (err, results) {
+    db.query('SELECT * FROM departments', function (err, results) {
+        if (err) {
+            console.log(err)
+        } else {
+            console.table(results)
+            // console.log('To exit press control and C on mac')
+        }
+    })
+}
+
+function getRoles() {
+    console.log("Get Roles Succesful");
+    db.query('SELECT * FROM roles', function (err, results) {
+        if (err) {
+            console.log(err)
+        } else {
+            console.table(results)
+        }
+    })
+}
+
+function getEmployees() {
+    console.log("Get Employees Succesful");
+    db.query('SELECT * FROM employees', function (err, results) {
         if (err) {
             console.log(err)
         } else {
