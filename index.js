@@ -78,6 +78,7 @@ const appOptions = [
 
 
 async function init() {
+    console.log(figlet.textSync('Employee Tracker'));
     await inquirer.prompt(initApp).then((data, err) => {
         if (data.initApp === "View All Departments") {
             getDept()

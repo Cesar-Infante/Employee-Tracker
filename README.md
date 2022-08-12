@@ -2,6 +2,10 @@
 ![License](https://img.shields.io/static/v1?label=License&message="None&color=BLUE)
 ## Description
 For this challenge we had to build a command-line application from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL. Working on this project I learned a little more on modularization along with setting up a sql connection.
+
+## Image
+<img src="Assets/App.png" alt="Employee Tracker in terminal">
+
 ## Table of Contents
 * [Installation](#installation)
 * [Exit-Application](#Exit-Application)
@@ -18,7 +22,7 @@ node index.js
 ```
 ## Exit-Application
 ```
-Control + C on mac
+Control + C 
 ```
 ## Issues
 Application not complete.
