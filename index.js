@@ -1,4 +1,3 @@
-
 /* Importing the fs module. */
 const fs = require("fs")
 
@@ -109,6 +108,7 @@ function getDept() {
             console.log(err)
         } else {
             console.table(results)
+            init()
             // console.log('To exit press control and C on mac')
         }
     })
@@ -121,6 +121,7 @@ function getRoles() {
             console.log(err)
         } else {
             console.table(results)
+            init()
         }
     })
 }
@@ -132,6 +133,7 @@ function getEmployees() {
             console.log(err)
         } else {
             console.table(results)
+            init()
         }
     })
 }
