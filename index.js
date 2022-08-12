@@ -1,6 +1,3 @@
-/* Importing the fs module. */
-const fs = require("fs")
-
 /* A dependency that allows the user to interact with the CLI. */
 const inquirer = require("inquirer")
 
@@ -31,6 +28,7 @@ const initApp = [
     },
 ];
 
+/* This is an array of objects that is being used to prompt the user for input. */
 const appOptions = [
     {
         type: "input",
@@ -76,9 +74,11 @@ const appOptions = [
 
 
 
+/* This makes the figlet text in the console */
+console.log(figlet.textSync('Employee Tracker'));
 
+/* This is a function that is being called to initialize the application. */
 async function init() {
-    console.log(figlet.textSync('Employee Tracker'));
     await inquirer.prompt(initApp).then((data, err) => {
         if (data.initApp === "View All Departments") {
             getDept()
@@ -102,6 +102,7 @@ async function init() {
 
 init()
 
+/* This is a function that is being called to get the departments from the database. */
 function getDept() {
     console.log(`
     Get Departments Succesful
@@ -116,6 +117,7 @@ function getDept() {
     })
 }
 
+/* This is a function that is being called to get the roles from the database. */
 function getRoles() {
     console.log(`
     Get Roles Succesful
@@ -130,6 +132,7 @@ function getRoles() {
     })
 }
 
+/* This is a function that is being called to get the employees from the database. */
 function getEmployees() {
     console.log(`
     Get Employees Succesful
