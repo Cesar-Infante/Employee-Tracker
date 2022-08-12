@@ -14,9 +14,20 @@ For this challenge we had to build a command-line application from scratch to ma
 * [Deployed](#deployed)
 * [Questions](#questions)
 ## Installation
+Populate database by running mysql along with 
+```
+source schema.sql
+```
+```
+source seeds.sql
+```
+
+install dependencies with 
 ``` 
 npm install
 ```
+
+run application with
 ```
 node index.js
 ```
