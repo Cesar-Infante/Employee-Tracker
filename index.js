@@ -104,7 +104,7 @@ init()
 
 function getDept() {
     console.log(`
-    Get Departmens Succesful
+    Get Departments Succesful
     `);
     db.query('SELECT * FROM departments', function (err, results) {
         if (err) {
