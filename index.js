@@ -102,20 +102,23 @@ async function init() {
 init()
 
 function getDept() {
-    console.log("Get Department Succesful");
+    console.log(`
+    Get Departmens Succesful
+    `);
     db.query('SELECT * FROM departments', function (err, results) {
         if (err) {
             console.log(err)
         } else {
             console.table(results)
             init()
-            // console.log('To exit press control and C on mac')
         }
     })
 }
 
 function getRoles() {
-    console.log("Get Roles Succesful");
+    console.log(`
+    Get Roles Succesful
+    `);
     db.query('SELECT * FROM roles', function (err, results) {
         if (err) {
             console.log(err)
@@ -127,7 +130,9 @@ function getRoles() {
 }
 
 function getEmployees() {
-    console.log("Get Employees Succesful");
+    console.log(`
+    Get Employees Succesful
+    `);
     db.query('SELECT * FROM employees', function (err, results) {
         if (err) {
             console.log(err)
